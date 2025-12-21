@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ISL Recognition</title>
+</head>
+<body>
+    {% if not name %}
+    <form method="post">
+        <h2>Enter Details</h2>
+        Name: <input type="text" name="name" required><br><br>
+        Age: <input type="number" name="age" required><br><br>
+        <button type="submit">Start</button>
+    </form>
+    {% else %}
+    <h2>Hello {{ name }} 👋</h2>
+    <p>How can I help you today?</p>
+    <img src="{{ url_for('video') }}" width="600">
+    {% endif %}
+</body>
+</html>
